@@ -1,0 +1,172 @@
+
+
+h1{
+    font-size: 42px;
+    text-align: center;
+}
+h2{
+    font-size: 28px;
+
+}
+h3{
+    font-size: 20px;
+
+}
+body {
+    background-color: #B6FFEB;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+/* Estilo para la tabla */
+        table {
+            width: 75%; /* Ancho de la tabla al % del contenedor */
+            border-collapse: collapse; /* Colapsar bordes de celdas */
+        }
+
+        /* Estilo para las celdas */
+        td {
+            border: 0px solid #ccc; /* Borde de las celdas */
+            padding: 10px; /* Espaciado interno */
+        }
+
+.tabulado {
+            white-space: pre; /* Conserva los espacios en blanco */
+        }
+
+        /* Estilos para las cartas */
+        .carta {
+            width: 266px;
+            height: 400px;
+            background-image: url('img/proba.png'); /* Imagen de reverso de las cartas */
+            background-size: cover;
+            cursor: pointer;
+            float: left;
+            margin-right: 20px;
+        }
+
+
+ /* Estilos para el menú */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+        }
+        a:hover {
+            background-color: #ccc;
+        }
+
+
+
+        /* Estilos para el dado */
+        #dado {
+            width: 125px;
+            height: 125px;
+            background-image: url('img/dado.jpg'); /* Imagen predeterminada */
+            background-size: cover;
+            cursor: pointer;
+        }
+          /* Estilos para la moneda */
+        #moneda {
+            width: 125px;
+            height: 125px;
+            background-image: url('img/moneda.jpg'); /* Imagen de la moneda */
+            background-size: cover;
+            cursor: pointer;
+        }
+         /* Estilos para los naipes */
+        .naipe {
+            width: 150px;
+            height: 200px;
+            background-image: url('img/naipes.jpg'); /* Imagen de reverso de las cartas */
+            background-size: cover;
+            cursor: pointer;
+            float: left;
+            margin-right: 20px;
+        }
+
+
+         /* Estilos para la ruleta*/
+         /* Estilos para el contenedor de la ruleta */
+        #ruleta-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border-radius: 50%;
+            border: 2px solid #333;
+            overflow: hidden;
+        }
+
+        /* Estilo para el cuerpo de la ruleta */
+        #cuerpo-ruleta {
+            position: absolute;
+            width: 300px; /* Ancho del cuerpo de la ruleta */
+            height: 300px; /* Altura del cuerpo de la ruleta */
+            background-color: #FFF; /* Color del cuerpo de la ruleta */
+            border-radius: 50%;
+            top: 0px; /* Ajustar la posición del cuerpo de la ruleta */
+            left: 0px; /* Ajustar la posición del cuerpo de la ruleta */
+        }
+
+        /* Estilo para la pieza del 20% */
+        #pieza-verde {
+            position: absolute;
+            width: 100%; /* Ocupa todo el ancho del cuerpo de la ruleta */
+            height: 100%; /* Ocupa todo el alto del cuerpo de la ruleta */
+            clip-path: polygon(50% 0, 100% 0, 100% 33.75%, 50% 50%);
+            transform-origin: 50% 50%;
+            transform: rotate(0deg); /* Ángulo de 72 grados para el 20% */
+            background-color: green; /* Color de la pieza */
+        }
+        /* Estilo para la pieza del 35% */
+        #pieza-amarilla {
+            position: absolute;
+            width: 100%; /* Ocupa todo el ancho del cuerpo de la ruleta */
+            height: 100%; /* Ocupa todo el alto del cuerpo de la ruleta */
+            clip-path: polygon(50% 0, 100% 0, 100% 86%, 50% 50%);
+            transform-origin: 50% 50%;
+            transform: rotate(72deg); /* Ángulo de  grados para el 35% */
+            background-color: yellow; /* Color de la pieza */
+        }
+        /* Estilo para la pieza del 45% */
+        #pieza-roja {
+            position: absolute;
+            width: 100%; /* Ocupa todo el ancho del cuerpo de la ruleta */
+            height: 100%; /* Ocupa todo el alto del cuerpo de la ruleta */
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 65.25% 100%, 50% 50%);
+            transform-origin: 50% 50%;
+            transform: rotate(197deg); /* Ángulo de  grados para el 35% */
+            background-color: red; /* Color de la pieza */
+        }
+        /* Estilos para la flecha */
+        #flecha {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #000;
+            top: calc(50% - 40px);
+            left: calc(50% - 20px);
+            transform-origin: 50% 100%;
+            transform: rotate(0deg);
+        }
+        
+
+        /* Estilos para el texto de los puntos */
+        #resultado-puntos {
+            
+            font-size: 24px;
+            margin-top: 20px;
+        }

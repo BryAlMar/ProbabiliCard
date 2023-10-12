@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="utf-8">
+    <metta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>ProbabiliCards</title>
+</head>
+<body>
+        <h1><a href="index.html"><img style="float:left; margin-right: 20px;" src="img/proba.png" width="100px">ProbabiliCards</a></h1>
+        <hr>
+        <table border="0" align="center">
+            <tr align="center"> <!-- Fila de encabezados -->
+                <td><a href="index.html">Inicio</td>
+                <td><a href="reglas.html">Reglas</a></td>
+                <td><a href="autor.html">Autoría</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </table>    
+        <hr><br>
+
+        <section id="top">
+        <h2>PROBABILÍSTICO</h2>
+                <p style="margin-left: 120px;">Selecciona una carta para empezar</p><br>
+
+                <table style="width: 90%;" border="0" align="center">
+                <tr align="center"> <!-- Fila de encabezados -->
+                    <td>
+                        <!-- ProbabiliCartas -->
+                        <div id="contenedorCarta">
+                        <div class="carta" onclick="voltearCarta(this, 1)"></div>
+                        <div class="carta" onclick="voltearCarta(this, 2)"></div>
+                        <div class="carta" onclick="voltearCarta(this, 3)"></div>
+                        
+                        </div>
+                    <!-- Resultado de la carta seleccionado -->
+                         <p id="resultadoCarta">Selecciona una carta para ver la carta.</p>
+                    </td>
+                </tr>  
+                </table>
+        </section>
+
+
+    <h2>Eventos Aleatorios</h2>
+    <p style="margin-left: 120px">Ahora realilza el evento indicado</p>
+    <table border="0" cellspacing="1" align="center">
+        <tr align="center">
+            <td>
+                <ul>
+                    <li><a href="#seccion1">DADO <span class="tabulado">              </span><img src="img/dadopers.jpg" width="80px"></a></li>
+                    <li><a href="#seccion2">MONEDA <span class="tabulado">              </span><img src="img/monedasp.jpg" width="80px"></a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li><a href="#seccion3">NAIPES <span class="tabulado">              </span><img src="img/baraja.jpg" width="80px"></a></li>
+                    <li><a href="#seccion4">RULETA <span class="tabulado">              </span><img src="img/ruleta.png" width="80px"></a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <br><br><br><br><br><br><br><br><br><br>
+
+<hr>
+    <table style="width: 90%;" border="0" align="center">
+        <tr align="center"> <!-- Fila de encabezados -->
+            <td><section id="seccion1">
+        <h3>Lanza el dado!</h3>
+        <p>Toca el dado para lanzarlo</p>
+        <!-- Dado -->
+        <div id="dado" onclick="lanzarDado()"></div>
+
+        <!-- Resultado del dado -->
+        <p id="resultadoDado">Resultado:</p>
+    </section></td>
+            <td><section id="seccion2">
+        <h3>Tira la moneda!</h3>
+        <p>Elige cara o cruz y lanza</p>
+        <!-- Moneda -->
+        <div id="moneda" onclick="lanzarMoneda()"></div>
+
+        <!-- Resultado del lanzamiento -->
+        <p id="resultadoMoneda">Resultado:</p>
+    </section></td>
+        </tr>
+    </table> 
+    <br>
+        <div align="center"><a href="#top"><u>Regresar a arriba</u></a></div>
+    <br><br><br><br><br>
+
+    <section id="seccion3">
+        <h3 style="margin-left: 120px;">Baraja!</h3>
+        <p style="margin-left: 120px;">Selecciona un naipe de la baraja</p><br>
+
+        <table style="width: 90%;" border="0" align="center">
+        <tr align="center"> <!-- Fila de encabezados -->
+            <td>
+                <!-- Naipes -->
+                <div id="contenedorNaipes">
+                <div class="naipe" onclick="voltearNaipe(this, 1)"></div>
+                <div class="naipe" onclick="voltearNaipe(this, 2)"></div>
+                <div class="naipe" onclick="voltearNaipe(this, 3)"></div>
+                <div class="naipe" onclick="voltearNaipe(this, 4)"></div>
+                <div class="naipe" onclick="voltearNaipe(this, 5)"></div>
+                <div class="naipe" onclick="voltearNaipe(this, 6)"></div>
+                </div>
+            <!-- Resultado del naipe seleccionado -->
+                 <p id="resultadoNaipe">Selecciona un naipe para ver la carta.</p>
+            </td>
+        </tr>  
+        </table>
+        <br>
+        <div align="center"><a href="#top"><u>Regresar a arriba</u></a></div>
+    </section>
+    <br><br><br><br><br>
+
+    <section id="seccion4">
+        <h3 style="margin-left: 120px;">Gira la Ruleta!</h3>
+        <p style="margin-left: 120px;">Toca el botón y hazla girar</p>
+        <!-- Ruleta -->
+        <!-- Contenedor de la ruleta -->
+        <div id="ruleta-container" style="margin-left: 200px;">
+            <!-- Cuerpo de la ruleta -->
+            <div id="cuerpo-ruleta">
+                <!-- Pieza del 20% -->
+                <div id="pieza-verde"></div>
+                <!-- Pieza del 35% -->
+                <div id="pieza-amarilla"></div>
+                <!-- Pieza del 45% -->
+                <div id="pieza-roja"></div>
+            </div>
+            <!-- Flecha -->
+                <div id="flecha"></div>
+        </div>
+            <button id="girar-btn" style="margin-left: 120px;">Girar Ruleta</button>
+        </div>
+
+        <!-- Texto para los puntos -->
+        <div id="resultado-puntos" style="margin-left: 120px;">Puntos: 0</div>
+        <br>
+        <div align="center"><a href="#top"><u>Regresar a arriba</u></a></div>
+    </section>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+    
+
+
+
+<footer>
+    <hr>
+    <p align="center">&copy; 2023 ProbabiliCards. Todos los derechos reservados.</p>
+    <p align="center">  Bryan Martínez MM22096</p>
+    <p align="center">UES</p>
+    
+</footer>
+
+</body>
+</html>
